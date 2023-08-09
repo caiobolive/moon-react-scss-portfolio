@@ -5,7 +5,7 @@ import "./styles/components/app.scss";
 function App() {
   return (
     <div id="portfolio">
-      <h1>Caio Oliveira</h1>
+      <h1>CAIO OLIVEIRA</h1>
       <MainContent />
     </div>
   );
