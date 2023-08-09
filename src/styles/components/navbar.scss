@@ -1,0 +1,16 @@
+@use '../variables';
+@use '../mixins';
+    
+#navbar {
+    padding: 3rem;
+    .main-title {
+        width: 100%;
+        color: variables.$text-color;
+        font-size: 2rem;
+        background: variables.$text-color;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+        
