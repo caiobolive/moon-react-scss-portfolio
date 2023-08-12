@@ -1,9 +1,0 @@
-@use '../variables';
-@use '../mixins';
-    
-#main-content {
-    flex: 2 1 0;
-    border-radius: variables.$container-border-radius;
-    padding: 1rem;
-}
-        

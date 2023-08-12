@@ -1,18 +1,33 @@
 @use '../variables';
 @use '../mixins';
     
-#navbar .navbar {
-    &__title {
-        padding: 1rem;
-        &__text {
-            width: 100%;
-            color: variables.$primary-color-100;
-            font-size: 2rem;
-            background: variables.$primary-color-100;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    .navbar {
+        &__title {
+            &__text {
+                width: 100%;
+                color: variables.$primary-color-100;
+                font-size: 2rem;
+                background: variables.$primary-color-100;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
-    }
+        &__list {
+            list-style: none;
+            display: flex;
+            &__item {
+                padding: 8px;
+                &__link {
+                    color: variables.$primary-color-100;
+                    text-decoration: none;
+                }
+            }
+        }
+    }    
 }
         

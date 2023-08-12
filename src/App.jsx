@@ -1,6 +1,8 @@
-import MainContent from "./components/MainContent";
+import Intro from "./components/Intro";
+import About from "./components/About"
 import NavBar from "./components/NavBar";
 import moonWindowClip from "/video/moon_window_clip.mp4"
+import {Routes, Route} from 'react-router-dom'
 
 import "./styles/components/app.scss";
 
@@ -9,7 +11,10 @@ function App() {
     <div id="portfolio">
       <video id="moon-window-background" src={moonWindowClip} autoPlay muted loop/>
       <NavBar />
-      <MainContent />
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/about" element={<About />} />        
+      </Routes>
     </div>
   );
 }
