@@ -1,0 +1,18 @@
+@use '../variables';
+@use '../mixins';
+    
+#intro-container .intro-container {
+    &__title {
+        color: variables.$primary-color-100;
+        font-size: 1rem;
+        margin-bottom: 1.3rem;
+        @include mixins.center;
+        justify-content: start;
+        gap: 1rem;
+
+        &:after {
+            @include mixins.gradient-border;
+        }
+    }
+}
+        

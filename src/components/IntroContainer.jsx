@@ -1,9 +1,13 @@
-const AboutContainer = () => {
+import "../styles/components/introcontainer.scss";
+
+const IntroContainer = () => {
   return (
-    <section className="about-container">
-      <h2>Sobre</h2>
+    <section id="intro-container" className="intro-container">
+      <div className="intro-container__title">
+        <h2>About</h2>
+      </div>
     </section>
   );
 };
 
-export default AboutContainer;
+export default IntroContainer;

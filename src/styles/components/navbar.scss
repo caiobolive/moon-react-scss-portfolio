@@ -1,16 +1,18 @@
 @use '../variables';
 @use '../mixins';
     
-#navbar {
-    padding: 3rem;
-    .main-title {
-        width: 100%;
-        color: variables.$primary-color-100;
-        font-size: 2rem;
-        background: variables.$primary-color-100;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+#navbar .navbar {
+    &__title {
+        padding: 1rem;
+        &__text {
+            width: 100%;
+            color: variables.$primary-color-100;
+            font-size: 2rem;
+            background: variables.$primary-color-100;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }
         
