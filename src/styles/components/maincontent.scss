@@ -2,7 +2,7 @@
 @use '../mixins';
     
 #main-content {
-    background-color: variables.$bg-color;
+    background-color: variables.$primary-color-500;
     flex: 2 1 0;
     border-radius: variables.$container-border-radius;
     padding: 3rem;
@@ -12,7 +12,7 @@
         flex-direction: column;
     }
     h2 {
-        color: variables.$text-color;
+        color: variables.$primary-color-100;
         font-size: 2.2rem;
         margin-bottom: 1.3rem;
         @include mixins.center;
@@ -24,7 +24,7 @@
         }
     }
     p {
-        color: variables.$text-color-secondary;
+        color: variables.$primary-color-200;
         margin-bottom: 1rem;
         line-height: 1.3rem;
     }
