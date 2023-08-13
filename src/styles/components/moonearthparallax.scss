@@ -33,22 +33,34 @@
 
 @media (min-aspect-ratio: 16/9) {
     .moon-earth-parallax {
-        &__moon-foreground,
-        &__earth-foreground,
-        &__stars-background {
+        &__moon-foreground {
+            height: auto;
+            width: 110vw;
+        }
+        &__earth-foreground {
             height: auto;
             width: 100vw;
+        }
+        &__stars-background {
+            height: auto;
+            width: 120vw;
         }
     }
 }
 
 @media (max-aspect-ratio: 16/9) {
     .moon-earth-parallax {
-        &__moon-foreground,
-        &__earth-foreground,
+        &__moon-foreground {
+            height: 110vh;
+            width: auto;
+        }
+        &__earth-foreground {
+            height: 100vh;
+            width: auto;
+        }
         &__stars-background {
-        height: 100vh;
-        width: auto;
+            height: 120vh;
+            width: auto;
         }
     }
 }

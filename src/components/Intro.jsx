@@ -10,8 +10,6 @@ class Intro extends Component {
 
     xValue = e.clientX - window.innerWidth / 2;
     yValue = e.clientY - window.innerHeight / 2;    
-
-    this.MoonEarthParallaxRef.handleParallaxEffect(xValue, yValue);
   };
 
   render() {
