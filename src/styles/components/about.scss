@@ -5,9 +5,9 @@
     padding: 8px 16px;
     .about {
         &__title {
+            margin-top: 100px;
             color: variables.$primary-color-100;
             font-size: 1rem;
-            margin-bottom: 1.3rem;
             @include mixins.center;
             justify-content: start;
             gap: 1rem;
