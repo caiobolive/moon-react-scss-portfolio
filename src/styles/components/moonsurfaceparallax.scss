@@ -1,0 +1,68 @@
+@use '../variables';
+@use '../mixins';
+    
+#moon-surface-parallax {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    .moon-surface-parallax {
+        &__surface-foreground {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &__surface-middleground {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &__moon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .parallax {
+        transition: 0.45s cubic-bezier(.2,.49,.32,.99);
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .moon-surface-parallax {
+        &__surface-foreground {
+            height: auto;
+            width: 120vw;
+        }
+        &__surface-middleground {
+            height: auto;
+            width: 115vw;
+        }
+        &__moon {
+            height: auto;
+            width: 100vw;
+        }
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .moon-surface-parallax {
+        &__surface-foreground {
+            height: 110vh;
+            width: auto;
+        }
+        &__surface-middleground {
+            height: 100vh;
+            width: auto;
+        }
+        &__moon { 
+            height: 100vh;
+            width: auto;
+        }
+    }
+}
+        

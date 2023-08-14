@@ -1,21 +1,12 @@
 import "../styles/components/intro.scss";
-import MoonEarthParallax from "./MoonEarthParallax"
+import MoonSpaceParallax from "./MoonSpaceParallax";
 import React, { Component } from 'react';
 
 class Intro extends Component {
-
-  handleMouseMove  = (e) => {
-    let xValue = 0;
-    let yValue = 0;
-
-    xValue = e.clientX - window.innerWidth / 2;
-    yValue = e.clientY - window.innerHeight / 2;    
-  };
-
   render() {
     return (
-      <section id="intro" className="intro" onMouseMove={this.handleMouseMove}>
-        <MoonEarthParallax ref={ref => this.MoonEarthParallaxRef = ref}/>
+      <section id="intro" className="intro">
+        <MoonSpaceParallax/>
         <div className="intro__content">
           <div className="intro__content__title">
             <h2>Intro</h2>

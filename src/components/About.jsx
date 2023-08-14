@@ -1,14 +1,16 @@
 import "../styles/components/about.scss";
-import moonWindowClip from "/video/moon_window_clip.mp4"
+import MoonSurfaceParallax from "./MoonSurfaceParallax";
 
 const About = () => {
   return (
     <section id="about" className="about">
-      <video id="moon-window-background" src={moonWindowClip} autoPlay muted loop/>
-      <div className="about__title">
-        <h2>About</h2>
-      </div>
-    </section>
+        <MoonSurfaceParallax/>
+        <div className="about__content">
+          <div className="about__content__title">
+            <h2>About</h2>
+          </div>
+        </div>
+      </section>
   );
 };
 
