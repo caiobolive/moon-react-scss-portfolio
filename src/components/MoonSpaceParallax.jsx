@@ -1,40 +1,49 @@
 import React, { Component } from 'react';
 import { MouseParallax } from "react-just-parallax";
 import "../styles/components/moonspaceparallax.scss";
-import moonSpaceStarsBackground from "/img/moon_space_parallax/moon_space_stars_background.png"
-import moonSpaceMoonBackground from "/img/moon_space_parallax/moon_space_moon_background.png"
-import moonSpaceMoonForeground from "/img/moon_space_parallax/moon_space_moon_foreground.png"
+import moonSpaceEarthForegroundVideo from "/video/earth_rotation_VP8.webm"
+import moonSpaceMoonForegroundVideo from "/video/moon_earth_clip_VP8.webm"
 
 class MoonSpaceParallax extends Component {  
   render() {
     return (
       <div id="moon-space-parallax" className="moon-space-parallax">
-        <MouseParallax isAbsolutelyPositioned="true" strength="0.2" enableOnTouchDevice="true">
-          <img 
-            id="moon-space-stars-background" 
-            className="moon-space-parallax__stars-background parallax" 
-            src={moonSpaceStarsBackground}
-            data-speedx="0.15"
-            data-speedy="0.15"
-          />
+        <MouseParallax isAbsolutelyPositioned="true" strength="-0.24" enableOnTouchDevice="true">
+          <div id="stars-layer-1-wrapper" className="moon-space-parallax__stars-background parallax">
+            <div id="stars-layer-1"></div>
+          </div>
         </MouseParallax>
-        <MouseParallax isAbsolutelyPositioned="true" strength="0.15" enableOnTouchDevice="true">      
-          <img 
-            id="moon-space-space-foreground" 
-            className="moon-space-parallax__space-foreground parallax" 
-            src={moonSpaceMoonBackground}
-            data-speedx="0.2"
-            data-speedy="0.2"
-          />
+        <MouseParallax isAbsolutelyPositioned="true" strength="-0.23" enableOnTouchDevice="true">
+          <div id="stars-layer-2-wrapper" className="moon-space-parallax__stars-background parallax">
+            <div id="stars-layer-2"></div>
+          </div>
         </MouseParallax>
-        <MouseParallax isAbsolutelyPositioned="true" strength="0.1" enableOnTouchDevice="true">
-          <img 
+        <MouseParallax isAbsolutelyPositioned="true" strength="-0.22" enableOnTouchDevice="true">
+          <div id="stars-layer-3-wrapper" className="moon-space-parallax__stars-background parallax">
+            <div id="stars-layer-3"></div>
+          </div>
+        </MouseParallax>
+        <MouseParallax isAbsolutelyPositioned="true" strength="-0.15" enableOnTouchDevice="true">
+          <video 
+            controls 
+            muted 
+            loop 
+            autoPlay="true" 
+            id="moon-space-earth-foreground" 
+            className="moon-space-parallax__earth-foreground parallax" >
+            <source src={moonSpaceEarthForegroundVideo} type="video/webm" />
+          </video>
+        </MouseParallax>
+        <MouseParallax isAbsolutelyPositioned="true" strength="-0.1" enableOnTouchDevice="true">
+          <video 
+            controls 
+            muted 
+            loop 
+            autoPlay="true" 
             id="moon-space-moon-foreground" 
-            className="moon-space-parallax__moon-foreground parallax" 
-            src={moonSpaceMoonForeground}
-            data-speedx="0.25"
-            data-speedy="0.25"
-          />      
+            className="moon-space-parallax__moon-foreground parallax">
+            <source src={moonSpaceMoonForegroundVideo} type="video/webm" />
+          </video>
         </MouseParallax>
       </div>
     );
