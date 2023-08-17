@@ -28,7 +28,7 @@ class MoonSpaceParallax extends Component {
             controls 
             muted 
             loop 
-            autoPlay="true" 
+            autoPlay={true} 
             id="moon-space-earth-foreground" 
             className="moon-space-parallax__earth-foreground parallax" >
             <source src={moonSpaceEarthForegroundVideo} type="video/webm" />
@@ -39,7 +39,7 @@ class MoonSpaceParallax extends Component {
             controls 
             muted 
             loop 
-            autoPlay="true" 
+            autoPlay={true} 
             id="moon-space-moon-foreground" 
             className="moon-space-parallax__moon-foreground parallax">
             <source src={moonSpaceMoonForegroundVideo} type="video/webm" />

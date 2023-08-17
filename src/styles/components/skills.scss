@@ -1,0 +1,26 @@
+@use '../variables';
+@use '../mixins';
+    
+#skills {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    .skills {
+        &__content {
+            margin-top: 100px;            
+            padding: 8px 16px;
+            &__title {
+                color: variables.$primary-color-100;
+                font-size: 1rem;
+                @include mixins.center;
+                justify-content: start;
+                gap: 1rem;
+        
+                &:after {
+                    @include mixins.gradient-border;
+                }
+            }
+        }
+    }
+}
+        
