@@ -1,20 +1,30 @@
 import "../styles/components/skills.scss";
 import MoonSpaceParallax from "./MoonSpaceParallax";
-import React, { Component } from 'react';
+import Loading from "./Loading";
+import React, { useState, useEffect } from 'react';
 
-class Skills extends Component {
-  render() {
-    return (
-      <section id="skills" className="skills">
-        <MoonSpaceParallax/>
-        <div className="skills__content">
-          <div className="skills__content__title">
-            <h2>Skills</h2>
-          </div>
+const Skills = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500); 
+  }, []);
+
+  return (
+    <section id="skills" className="skills">
+      <div>
+        {isLoading ? <Loading /> : null}
+      </div>
+      <MoonSpaceParallax/>
+      <div className="skills__content">
+        <div className="skills__content__title">
+          <h2>Skills</h2>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );  
 };
 
 export default Skills;

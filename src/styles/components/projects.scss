@@ -20,6 +20,20 @@
                     @include mixins.gradient-border;
                 }
             }
+            &__track {
+                display: flex;
+                gap: 4vmin;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                &__image {
+                    width: 40vmin;
+                    height: 56vmin;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
         }
     }
 }
