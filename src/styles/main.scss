@@ -42,6 +42,67 @@ a, svg {
     }
 }
 
+.neon-pulse {
+	-webkit-animation: neon-pulse 10s linear infinite both;
+	        animation: neon-pulse 10s linear infinite both;
+            text-shadow: 0 0 10px variables.$primary-color-100,
+        0 0 20px variables.$primary-color-100;
+}
+
+@-webkit-keyframes neon-pulse {
+    0%, 1%, 1.02%, 8.98%, 9.48%, 9.5%, 9.6%, 9.62%, 9.82%, 14.98%, 15.18%, 15.48%, 15.82%, 16.02%, 16.22%, 16.98%, 17%, 17.8%, 17.82%, 20.48%, 21.32%, 20.98%, 21%, 22%, 22.02%, 39.98%, 40%, 41%, 41.02%, 40.48%, 41.42% , 41.98%, 42%, 42.8%, 42.82%, 59.98%, 60%, 61%, 61.02%, 60.18%, 61.02%, 60.78%, 61.62%, 61.38%, 62.22%, 61.78%, 61.8%, 62.8%, 62.82%, 75.98%, 76%, 77%, 77.02%, 77.98%, 78.82%, 78.98%, 79%, 80%, 80.02%, 99.98%, 100%, 101%, 101.02% {
+      opacity: 1;
+    }
+    9%, 9.8%, 61.4%, 62.2% {
+      opacity: 0;
+    }
+    60.2%, 61% {
+      opacity: 0.2;
+    }
+    60.8%, 61.6% {
+      opacity: 0.4;
+    }
+    15%, 15.5%, 15.8%, 16.2% {
+      opacity: 0.5;
+    }     
+    40.5%, 41.4% {
+      opacity: 0.6;
+    }
+    15.2%, 16%, 78%, 78.8% {
+      opacity: 0.7;
+    }
+    20.5%, 21.3% {
+      opacity: 0.9;
+    }
+}
+
+@keyframes neon-pulse {
+    0%, 1%, 1.02%, 8.98%, 9.48%, 9.5%, 9.6%, 9.62%, 9.82%, 14.98%, 15.18%, 15.48%, 15.82%, 16.02%, 16.22%, 16.98%, 17%, 17.8%, 17.82%, 20.48%, 21.32%, 20.98%, 21%, 22%, 22.02%, 39.98%, 40%, 41%, 41.02%, 40.48%, 41.42% , 41.98%, 42%, 42.8%, 42.82%, 59.98%, 60%, 61%, 61.02%, 60.18%, 61.02%, 60.78%, 61.62%, 61.38%, 62.22%, 61.78%, 61.8%, 62.8%, 62.82%, 75.98%, 76%, 77%, 77.02%, 77.98%, 78.82%, 78.98%, 79%, 80%, 80.02%, 99.98%, 100%, 101%, 101.02% {
+      opacity: 1;
+    }
+    9%, 9.8%, 61.4%, 62.2% {
+      opacity: 0;
+    }
+    60.2%, 61% {
+      opacity: 0.2;
+    }
+    60.8%, 61.6% {
+      opacity: 0.4;
+    }
+    15%, 15.5%, 15.8%, 16.2% {
+      opacity: 0.5;
+    }     
+    40.5%, 41.4% {
+      opacity: 0.6;
+    }
+    15.2%, 16%, 78%, 78.8% {
+      opacity: 0.7;
+    }
+    20.5%, 21.3% {
+      opacity: 0.9;
+    }
+}
+
 .neon-flicker-in {
 	-webkit-animation: neon-flicker-in 3s linear both;
 	        animation: neon-flicker-in 3s linear both;
@@ -51,7 +112,7 @@ a, svg {
     0% {
       opacity: 0;
     }
-    10% {
+    10%, 10.2%, 20%, 20.6%, 30%, 30.6%, 45%, 55.1%, 57%, 60.1%, 65%, 75.1%, 77%, 85.1%, 86% {
       opacity: 0;
       text-shadow: none;
     }
@@ -59,124 +120,29 @@ a, svg {
       opacity: 1;
       text-shadow: none;
     }
-    10.2% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    20% {
-      opacity: 0;
-      text-shadow: none;
-    }
     20.1% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     }
-    20.6% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    30% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    30.1% {
+    30.1%, 30.5%, 45.1%, 50%, 55%, 57.1%, 60% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
-    30.5% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    30.6% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    45% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    45.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    50% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    55% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    55.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    57% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    57.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-    }
-    60% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-    }
-    60.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    65% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    65.1% {
+    65.1%, 75% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
     }
-    75% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    75.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    77% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    77.1% {
+    77.1%, 85%, 86.1%, 100% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    85% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    85.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    86% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    86.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    100% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
     }
   }
+  
   @keyframes neon-flicker-in {
     0% {
       opacity: 0;
     }
-    10% {
+    10%, 10.2%, 20%, 20.6%, 30%, 30.6%, 45%, 55.1%, 57%, 60.1%, 65%, 75.1%, 77%, 85.1%, 86% {
       opacity: 0;
       text-shadow: none;
     }
@@ -184,117 +150,21 @@ a, svg {
       opacity: 1;
       text-shadow: none;
     }
-    10.2% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    20% {
-      opacity: 0;
-      text-shadow: none;
-    }
     20.1% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     }
-    20.6% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    30% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    30.1% {
+    30.1%, 30.5%, 45.1%, 50%, 55%, 57.1%, 60% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
     }
-    30.5% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    30.6% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    45% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    45.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    50% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    55% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-    }
-    55.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    57% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    57.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-    }
-    60% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-    }
-    60.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    65% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    65.1% {
+    65.1%, 75% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
     }
-    75% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    75.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    77% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    77.1% {
+    77.1%, 85%, 86.1%, 100% {
       opacity: 1;
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    85% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    85.1% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    86% {
-      opacity: 0;
-      text-shadow: none;
-    }
-    86.1% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-    }
-    100% {
-      opacity: 1;
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
     }
   }
 

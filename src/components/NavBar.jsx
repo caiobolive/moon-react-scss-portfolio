@@ -26,16 +26,16 @@ const NavBar = () => {
         </div>
         <ul className={click ? "navbar__container__list active" : "navbar__container__list"}>
           <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '100ms' }}>
-            <Link to="/about" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-text"} onClick={handleClick}>About</Link>
+            <Link to="/about" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>About</Link>
           </li>
           <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '200ms' }}>
-            <Link to="/skills" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-text"} onClick={handleClick}>Skills</Link>
+            <Link to="/skills" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>Skills</Link>
           </li>
           <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '300ms' }}>
-            <Link to="/projects" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-text"} onClick={handleClick}>Projects</Link>
+            <Link to="/projects" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>Projects</Link>
           </li>
           <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '400ms' }}>
-            <Link to="/experiences" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-text"} onClick={handleClick}>Experiences</Link>
+            <Link to="/experiences" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>Experiences</Link>
           </li>
         </ul>
         <IconButton className={animationIn ? "navbar__container__icon neon-flicker-in" : "navbar__container__icon neon-text"} onClick={handleClick}>

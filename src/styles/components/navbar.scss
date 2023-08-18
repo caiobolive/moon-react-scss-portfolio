@@ -31,18 +31,6 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    &:after {
-                        content: "";
-                        display: block;
-                        height: 3px;
-                        width: 0;
-                        background: transparent;
-                        transition: width 0.7s ease, background-color 0.5s ease;
-                    }
-                    &:hover:after {
-                        width: 25.5vh;
-                        background: variables.$primary-color-100;
-                    }
                 }
             }
             &__list {
