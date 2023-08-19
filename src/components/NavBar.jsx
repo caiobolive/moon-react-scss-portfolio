@@ -19,10 +19,10 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav id="navbar" className={click ? "navbar active" : "navbar"}>
+    <nav id="navbar" className="navbar">
       <div className="navbar__container">
         <div className="navbar__container__title">
-          <Link to="/" className={animationIn ? "navbar__container__title__text neon-flicker-in" : "navbar__container__title__text neon-text"}>CAIO OLIVEIRA</Link>
+          <Link to="/" className={animationIn ? "navbar__container__title__text neon-flicker-in" : "navbar__container__title__text neon-text"} onClick={handleClick}>CAIO OLIVEIRA</Link>
         </div>
         <ul className={click ? "navbar__container__list active" : "navbar__container__list"}>
           <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '100ms' }}>
