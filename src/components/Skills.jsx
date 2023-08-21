@@ -1,5 +1,5 @@
 import "../styles/components/skills.scss";
-import MoonSpaceParallax from "./MoonSpaceParallax";
+import MoonPhasesParallax from "./MoonPhasesParallax";
 import Loading from "./Loading";
 import React, { useState, useEffect } from 'react';
 
@@ -17,7 +17,7 @@ const Skills = () => {
       <div>
         {isLoading ? <Loading /> : null}
       </div>
-      <MoonSpaceParallax/>
+      <MoonPhasesParallax/>
       <div className="skills__content">
         <div className="skills__content__title">
           <h2>Skills</h2>
