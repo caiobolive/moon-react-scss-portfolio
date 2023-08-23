@@ -8,7 +8,7 @@ class MoonPhasesParallax extends Component {
     return (
       <div id="moon-phases-parallax" className="moon-phases-parallax">
         <MouseParallax isAbsolutelyPositioned="true" strength="-0.1" enableOnTouchDevice="true">
-        <video 
+          <video 
             controls 
             muted 
             loop 

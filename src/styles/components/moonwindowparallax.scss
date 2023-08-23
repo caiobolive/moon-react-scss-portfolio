@@ -1,0 +1,99 @@
+@use '../variables';
+@use '../mixins';
+    
+#moon-window-parallax {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    .moon-window-parallax {
+        &__window-frame {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        &__window-reflex {
+            position: absolute;
+            top: 55%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+        }
+        &__window-profile {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .parallax {
+        transition: 0.45s cubic-bezier(.2,.49,.32,.99);
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+        .moon-window-parallax {
+            &__window-frame {
+                height: auto;
+                width: 40vw;
+            }
+            &__window-reflex {
+                height: auto;
+                width: 30vw;
+            }
+            &__window-profile {
+                height: auto;
+                width: 20vw;
+            }
+        }
+    }
+    
+    @media (max-aspect-ratio: 16/9) {
+        .moon-window-parallax {
+            &__window-frame {
+                height: 60vh;
+                width: auto;
+                top: 35%;
+                left: 25%;
+            }
+            &__window-reflex {
+                height: 40vh;
+                width: auto;                
+                top: 45%;
+                left: 25%;
+            }
+            &__window-profile {
+                height: 30vh;
+                width: auto;
+                top: 35%;
+                left: 25%;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 720px) {
+        .moon-window-parallax {
+            &__window-frame {
+                height: 60vh;
+                width: auto;
+                top: 35%;
+                left: 50%;
+            }
+            &__window-reflex {
+                height: 40vh;
+                width: auto;                
+                top: 45%;
+                left: 50%;
+            }
+            &__window-profile {
+                height: 30vh;
+                width: auto;
+                top: 35%;
+                left: 50%;
+            }
+        }
+    }
+}
+
+        
