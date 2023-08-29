@@ -1,7 +1,7 @@
 import "../styles/components/skills.scss";
 import MoonPhasesParallax from "./MoonPhasesParallax";
 import Loading from "./Loading";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactIcon from '../../public/img/skill_icons/react.svg';
 import AngularIcon from '../../public/img/skill_icons/angular.svg';
 import HtmlIcon from '../../public/img/skill_icons/html5.svg';
@@ -26,6 +26,69 @@ const Skills = () => {
     }, 500); 
   }, []);
 
+  const frameworks = [
+    { image: ReactIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon big-size-icon' },
+    { image: AngularIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon big-size-icon' }
+  ];
+
+  const basics = [
+    { image: HtmlIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' },
+    { image: CssIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' },
+    { image: JsIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+  ];
+
+  const addons = [
+    { image: TsIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' },
+    { image: SassIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+  ];
+
+  const logic = [
+    { image: CIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' },
+    { image: CppIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+  ];
+
+  const repo = [
+    { image: GithubIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' },
+    { image: BitbucketIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' },
+    { image: JiraIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+  ];
+
+  const tools = [
+    { image: VscodeIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' },
+    { image: FigmaIcon, text: 'Text', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+  ];
+
+  const listOfLists = [frameworks, basics, addons, logic, repo, tools];
+  
+  const [selectedIndexes, setSelectedIndexes] = useState(new Array(listOfLists.length).fill(null));
+
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      const isOutside = listOfLists.some((items, listIndex) => {
+        if (selectedIndexes[listIndex] !== null) {
+          return !event.target.closest(`.my-list:nth-child(${listIndex + 1})`);
+        }
+        return false;
+      });
+
+      if (isOutside) {
+        setSelectedIndexes(new Array(listOfLists.length).fill(null));
+      }
+    };
+
+    document.addEventListener('click', handleDocumentClick);
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, [listOfLists, selectedIndexes]);
+
+  const handleItemClick = (listIndex, itemIndex, event) => {
+    event.stopPropagation();
+    const newSelectedIndexes = [...selectedIndexes];
+    newSelectedIndexes[listIndex] = itemIndex;
+    setSelectedIndexes(newSelectedIndexes);
+  };
+
   return (
     <section id="skills" className="skills">
       <div>
@@ -37,60 +100,26 @@ const Skills = () => {
           <h2>Skills</h2>
         </div>
         <div className="skills__content__list-container">
-          <ul className="skills__content__list-container__list">
-            <li className="skills__content__list-container__list__item">
-              <img src={ReactIcon} className="big-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={AngularIcon} className="big-wide-size-icon" /> 
-            </li>
+          {listOfLists.map((items, listIndex) => (
+          <ul 
+            className="skills__content__list-container__list" 
+            key={listIndex}
+          >
+            {items.map((item, itemIndex) => (
+              <li 
+                key={itemIndex}               
+                onClick={(event) => handleItemClick(listIndex, itemIndex, event)}
+                onTouchStart={(event) => handleItemClick(listIndex, itemIndex, event)}
+                className={selectedIndexes[listIndex] !== null && selectedIndexes[listIndex] !== itemIndex ? 'skills__content__list-container__list__item hidden' : 'skills__content__list-container__list__item'}
+              >
+                <img src={item.image} className={item.class} />
+                <div className={selectedIndexes[listIndex] === itemIndex ? 'skills__content__list-container__list__item__text visible' : 'skills__content__list-container__list__item__text'}>
+                  <span className="small-neon-text">{item.text}</span>
+                </div> 
+              </li>
+            ))}
           </ul>
-          <ul className="skills__content__list-container__list">
-            <li className="skills__content__list-container__list__item">
-              <img src={HtmlIcon} className="default-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={CssIcon} className="default-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={JsIcon} className="default-size-icon" /> 
-            </li>
-          </ul>
-          <ul className="skills__content__list-container__list">
-            <li className="skills__content__list-container__list__item">
-              <img src={TsIcon} className="default-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={SassIcon} className="default-size-icon" /> 
-            </li>
-          </ul>
-          <ul className="skills__content__list-container__list">
-            <li className="skills__content__list-container__list__item">
-              <img src={CIcon} className="default-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={CppIcon} className="default-size-icon" /> 
-            </li>
-          </ul>
-          <ul className="skills__content__list-container__list">
-            <li className="skills__content__list-container__list__item">
-              <img src={GithubIcon} className="default-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={BitbucketIcon} className="default-size-icon" /> 
-            </li>
-          </ul>
-          <ul className="skills__content__list-container__list">
-            <li className="skills__content__list-container__list__item">
-              <img src={VscodeIcon} className="default-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={JiraIcon} className="default-size-icon" /> 
-            </li>
-            <li className="skills__content__list-container__list__item">
-              <img src={FigmaIcon} className="default-size-icon" /> 
-            </li>
-          </ul>
+          ))}
         </div>
       </div>
     </section>

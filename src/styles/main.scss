@@ -26,6 +26,10 @@ a, svg {
     background-color: variables.$primary-color-600;
 }
 
+.small-neon-text {
+  text-shadow: 0 0 5px variables.$primary-color-100
+}
+
 .neon-text {
     outline: none;
     animation: neon 5s linear infinite;
