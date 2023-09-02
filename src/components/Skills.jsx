@@ -27,68 +27,39 @@ const Skills = () => {
   }, []);
 
   const frameworks = [
-    { image: ReactIcon, text: 'Most of my personal projects including this portfolio were made on React', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: AngularIcon, text: 'I have worked with Angular for over than a year at Cilia Technology', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+    { image: ReactIcon, text: 'Most of my personal projects including this portfolio were made on React', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: AngularIcon, text: 'I have worked with Angular for over than a year at Cilia Technology', class: 'skills__content__list-container__item__icon default-size-icon' }
   ];
 
   const basics = [
-    { image: HtmlIcon, text: 'All around intermediate through some advanced concepts', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: CssIcon, text: 'I keep up with the more recent updates on selectors, effects, properties, also use the BEM Css methodology', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: JsIcon, text: 'With the Academind Web Dev 2022 course I have built an entire E-commerce with vanilla javascript on the front-end', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+    { image: HtmlIcon, text: 'All around intermediate through some advanced concepts', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: CssIcon, text: 'I keep up with the more recent updates on selectors, effects, properties, also use the BEM Css methodology', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: JsIcon, text: 'With the Academind Web Dev 2022 course I have built an entire E-commerce with vanilla javascript on the front-end', class: 'skills__content__list-container__item__icon default-size-icon' }
   ];
 
   const addons = [
-    { image: TsIcon, text: 'Works very well with Angular specially with Java Back-end, have worked with ir for a year as well', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: SassIcon, text: 'Also used Scss at work, it makes great use of the BEM Css methodology for organizing stylization', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+    { image: TsIcon, text: 'Works very well with Angular specially with Java Back-end, have worked with ir for a year as well', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: SassIcon, text: 'Also used Scss at work, it makes great use of the BEM Css methodology for organizing stylization', class: 'skills__content__list-container__item__icon default-size-icon' }
   ];
 
   const logic = [
-    { image: CIcon, text: 'Have used C on my degree in Computer Engineering as I learned programming logic at university', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: CppIcon, text: 'Have extensively used C++ on my Computer engineering Degree, also made my final paper on C++', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+    { image: CIcon, text: 'Have used C on my degree in Computer Engineering as I learned programming logic at university', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: CppIcon, text: 'Have extensively used C++ on my Computer engineering Degree, also made my final paper on C++', class: 'skills__content__list-container__item__icon default-size-icon' }
   ];
 
   const repo = [
-    { image: GithubIcon, text: 'Always used github for my personal projects, I have a descent knowledge on how to use it', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: BitbucketIcon, text: 'Have used Bitbucket at my current job, with the company best practises', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: JiraIcon, text: 'Great tool for managing projects, tasks, Scrum and so on', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+    { image: GithubIcon, text: 'Always used github for my personal projects, I have a descent knowledge on how to use it', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: BitbucketIcon, text: 'Have used Bitbucket at my current job, with the company best practises', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: JiraIcon, text: 'Great tool for managing projects, tasks, Scrum and so on', class: 'skills__content__list-container__item__icon default-size-icon' }
   ];
 
   const tools = [
-    { image: VscodeIcon, text: 'My preferred IDE for developing front-end with its extensions', class: 'skills__content__list-container__list__item__icon default-size-icon' },
-    { image: FigmaIcon, text: 'I have made a few designs myself, also currently studying the tool and UI/UX', class: 'skills__content__list-container__list__item__icon default-size-icon' }
+    { image: VscodeIcon, text: 'My preferred IDE for developing front-end with its extensions', class: 'skills__content__list-container__item__icon default-size-icon' },
+    { image: FigmaIcon, text: 'I have made a few designs myself, also currently studying the tool and UI/UX', class: 'skills__content__list-container__item__icon default-size-icon' }
   ];
 
-  const listOfLists = [frameworks, basics, addons, logic, repo, tools];
+  const listOfLists = [...frameworks, ...basics, ...addons, ...logic, ...repo, ...tools];
   
-  const [selectedIndexes, setSelectedIndexes] = useState(new Array(listOfLists.length).fill(null));
-
-  useEffect(() => {
-    const handleDocumentClick = (event) => {
-      const isOutside = listOfLists.some((items, listIndex) => {
-        if (selectedIndexes[listIndex] !== null) {
-          return !event.target.closest(`.my-list:nth-child(${listIndex + 1})`);
-        }
-        return false;
-      });
-
-      if (isOutside) {
-        setSelectedIndexes(new Array(listOfLists.length).fill(null));
-      }
-    };
-
-    document.addEventListener('click', handleDocumentClick);
-    return () => {
-      document.removeEventListener('click', handleDocumentClick);
-    };
-  }, [listOfLists, selectedIndexes]);
-
-  const handleItemClick = (listIndex, itemIndex, event) => {
-    event.stopPropagation();
-    const newSelectedIndexes = [...selectedIndexes];
-    newSelectedIndexes[listIndex] = itemIndex;
-    setSelectedIndexes(newSelectedIndexes);
-  };
-
   return (
     <section id="skills" className="skills">
       <div>
@@ -100,26 +71,17 @@ const Skills = () => {
           <h2>Skills</h2>
         </div>
         <div className="skills__content__list-container">
-          {listOfLists.map((items, listIndex) => (
-          <ul 
-            className="skills__content__list-container__list" 
-            key={listIndex}
-          >
-            {items.map((item, itemIndex) => (
-              <li 
-                key={itemIndex}               
-                onClick={(event) => handleItemClick(listIndex, itemIndex, event)}
-                onTouchStart={(event) => handleItemClick(listIndex, itemIndex, event)}
-                className={selectedIndexes[listIndex] !== null && selectedIndexes[listIndex] !== itemIndex ? 'skills__content__list-container__list__item hidden' : 'skills__content__list-container__list__item'}
+            {listOfLists.map((item, itemIndex) => (
+              <div 
+                key={itemIndex}
+                className="skills__content__list-container__item"
               >
                 <img src={item.image} className={item.class} />
-                <div className={selectedIndexes[listIndex] === itemIndex ? 'skills__content__list-container__list__item__text visible' : 'skills__content__list-container__list__item__text'}>
+                <div className="skills__content__list-container__item__text">
                   <span className="small-neon-text">{item.text}</span>
                 </div> 
-              </li>
+              </div>
             ))}
-          </ul>
-          ))}
         </div>
       </div>
     </section>
