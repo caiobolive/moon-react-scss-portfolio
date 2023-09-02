@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { MouseParallax } from "react-just-parallax";
 import "../styles/components/moonwindowparallax.scss";
-import moonWindowFrame from "../../public/img/moon_window_parallax/moon_window_frame.png";
-import moonWindowProfile from "../../public/img/moon_window_parallax/moon_window_profile.png";
-import moonWindowReflex from "../../public/video/moon_window_reflex_VP8.webm";
+import moonWindowFrame from "/img/moon_window_parallax/moon_window_frame.png";
+import moonWindowProfile from "/img/moon_window_parallax/moon_window_profile.png";
+import moonWindowReflex from "/video/moon_window_reflex_VP8.webm";
 
 class MoonWindowParallax extends Component {  
   render() {
