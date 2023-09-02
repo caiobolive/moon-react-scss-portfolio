@@ -21,23 +21,23 @@ const NavBar = () => {
   return (
     <nav id="navbar" className="navbar">
       <div className="navbar__container">
-        <div className="navbar__container__title">
+        <div className="navbar__container__title link">
           <Link to="/" className={animationIn ? "navbar__container__title__text neon-flicker-in" : "navbar__container__title__text neon-text"} onClick={handleClick}>CAIO OLIVEIRA</Link>
         </div>
         <ul className={click ? "navbar__container__list active" : "navbar__container__list"}>
-          <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '100ms' }}>
+          <li className={click ? "navbar__container__list__item link active" : "navbar__container__list__item link"} style={{ '--transition-delay': '100ms' }}>
             <Link to="/" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>Home</Link>
           </li>
-          <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '200ms' }}>
+          <li className={click ? "navbar__container__list__item link active" : "navbar__container__list__item link"} style={{ '--transition-delay': '200ms' }}>
             <Link to="/about" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>About</Link>
           </li>
-          <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '300ms' }}>
+          <li className={click ? "navbar__container__list__item link active" : "navbar__container__list__item link"} style={{ '--transition-delay': '300ms' }}>
             <Link to="/skills" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>Skills</Link>
           </li>
-          <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '400ms' }}>
+          <li className={click ? "navbar__container__list__item link active" : "navbar__container__list__item link"} style={{ '--transition-delay': '400ms' }}>
             <Link to="/projects" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>Projects</Link>
           </li>
-          <li className={click ? "navbar__container__list__item active" : "navbar__container__list__item"} style={{ '--transition-delay': '500ms' }}>
+          <li className={click ? "navbar__container__list__item link active" : "navbar__container__list__item link"} style={{ '--transition-delay': '500ms' }}>
             <Link to="/experiences" className={animationIn ? "navbar__container__list__item__link neon-flicker-in" : "navbar__container__list__item__link neon-pulse"} onClick={handleClick}>Experiences</Link>
           </li>
         </ul>

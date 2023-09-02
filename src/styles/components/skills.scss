@@ -41,8 +41,7 @@
                     border-bottom: 1px solid variables.$primary-color-100;
                     border-radius: 8px;
                     &__icon {
-                        user-select: none; 
-                        cursor: pointer;
+                        user-select: none;
                         transition: all 0.3s ease;
                         &:hover {
                             filter: drop-shadow(0 0 5px variables.$primary-color-100); 

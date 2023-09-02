@@ -77,7 +77,7 @@ const Projects = () => {
           <h2>Projects</h2>
         </div>
         <div 
-          className="projects__content__track" 
+          className="projects__content__track lat-scroll" 
           id="projects-track"
           ref={trackRef}
           onMouseDown={handleOnDown} 
