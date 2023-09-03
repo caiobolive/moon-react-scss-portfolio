@@ -1,5 +1,5 @@
 import "../styles/components/experiences.scss";
-import MoonSpaceParallax from "./MoonSpaceParallax";
+import MoonZoomOutParallax from "./MoonZoomOutParallax";
 import Loading from "./Loading";
 import React, { useState, useEffect } from 'react';
 
@@ -17,7 +17,7 @@ const Experiences = () => {
       <div>
         {isLoading ? <Loading /> : null}
       </div>
-      <MoonSpaceParallax/>
+      <MoonZoomOutParallax/>
       <div className="experiences__content">
         <div className="experiences__content__title">
           <h2>Experiences</h2>

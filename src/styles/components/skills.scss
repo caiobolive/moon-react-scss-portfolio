@@ -23,6 +23,7 @@
             &__list-container {
                 margin-top: 16px;
                 overflow-y: scroll;
+                scroll-behavior: smooth;
                 max-height: 70vh;
                 -ms-overflow-style: none;
                 scrollbar-width: none;

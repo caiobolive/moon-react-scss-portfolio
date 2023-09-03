@@ -22,10 +22,6 @@ a, svg {
     transition: .4s;
 }
 
-a {
-  cursor: none;
-}
-
 ::selection {
     background-color: variables.$primary-color-600;
 }
