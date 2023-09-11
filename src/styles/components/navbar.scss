@@ -22,16 +22,16 @@
                 text-decoration: none;
                 flex-grow: 1;
                 z-index: 2;                
-                &__text {
+                &__link {
                     display: flex;
-                    color: variables.$primary-color-100;
-                    text-decoration: none;
-                    font-size: 2rem;
-                    line-height: 2rem;
-                    background: variables.$primary-color-100;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    align-items: center;
+                    &__img {
+                        height: 60px;
+                        width: 60px;
+                        background-color: white;
+                        border-radius: 50%;
+                        filter: drop-shadow(0 0 5px variables.$primary-color-100); 
+                    }
                 }
             }
             &__list {
@@ -70,6 +70,14 @@
     @media screen and (max-width: 720px) {
         .navbar {
             &__container {
+                &__title {
+                    &__link {
+                        &__img {
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+                }
                 &__list {
                     display: flex;
                     flex-direction: column;

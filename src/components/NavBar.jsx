@@ -1,6 +1,7 @@
 import "../styles/components/navbar.scss";
 import { Link } from 'react-router-dom';
 import { IconButton } from '@mui/material';
+import AstronautProfile from '/img/arts/astronaut_profile.svg'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import React, { useState, useEffect } from 'react';
@@ -22,7 +23,9 @@ const NavBar = () => {
     <nav id="navbar" className="navbar">
       <div className="navbar__container">
         <div className="navbar__container__title link">
-          <Link to="/" className={animationIn ? "navbar__container__title__text neon-flicker-in" : "navbar__container__title__text neon-text"} onClick={handleClick}>CAIO OLIVEIRA</Link>
+          <Link to="/" className={animationIn ? "navbar__container__title__link neon-flicker-in" : "navbar__container__title__link neon-text"} onClick={handleClick}>
+            <img src={AstronautProfile} className="navbar__container__title__link__img" draggable={false}/>
+          </Link>
         </div>
         <ul className={click ? "navbar__container__list active" : "navbar__container__list"}>
           <li className={click ? "navbar__container__list__item link active" : "navbar__container__list__item link"} style={{ '--transition-delay': '100ms' }}>

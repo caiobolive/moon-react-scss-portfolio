@@ -30,7 +30,7 @@ a, svg {
   text-shadow: 0 0 5px variables.$primary-color-100;
 }
 
-.neon-text {
+.neon-text-200 {
     outline: none;
     animation: neon 5s linear infinite;
 }
@@ -44,6 +44,21 @@ a, svg {
         text-shadow: 0 0 10px variables.$primary-color-100,
         0 0 20px variables.$primary-color-100;
     }
+}
+
+.neon-text {
+  outline: none;
+  animation: neon 5s linear infinite;
+}
+
+@keyframes neon {
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+      text-shadow: 0 0 10px variables.$primary-color-100,
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+      text-shadow: 0 0 10px variables.$primary-color-100,
+      0 0 10px variables.$primary-color-100;
+  }
 }
 
 .neon-pulse {

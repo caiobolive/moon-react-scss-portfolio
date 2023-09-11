@@ -7,17 +7,55 @@
     position: relative;
     .intro {
         &__content {
-            margin-top: 100px;            
-            padding: 8px 16px;
-            &__title {
+            margin-top: 8vh;            
+            padding: 16px;
+            height: 92vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &__title, &__see-more {
                 color: variables.$primary-color-100;
-                font-size: 1rem;
-                @include mixins.center;
-                justify-content: start;
-                gap: 1rem;
-        
-                &:after {
-                    @include mixins.gradient-border;
+                font-size: 3.5rem;
+                h1 {
+                    letter-spacing: -0.3rem;
+                }
+                h4, h6 {
+                    letter-spacing: -0.2rem;
+                }
+            }
+            &__see-more {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                &__link {
+                    text-decoration: none;
+                    padding: 16px;
+                    background: rgba(0, 0, 0, 0.2);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    border-bottom: 1px solid variables.$primary-color-100;
+                    border-radius: 8px;
+                    &__text {
+                        color: variables.$primary-color-100;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 720px) {
+        .intro {
+            &__content {
+                &__title, &__see-more {
+                    font-size: 2rem;
+                    h1 {
+                        letter-spacing: -0.2rem;
+                    }
+                    h4, h6 {
+                        letter-spacing: -0.1rem;
+                    }
+                    h6 {
+                        letter-spacing: -0.05rem;
+                    }
                 }
             }
         }
