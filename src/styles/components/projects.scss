@@ -30,11 +30,28 @@
                 overflow: hidden;
                 transform: translate(0, -50%);
                 user-select: none;
-                &__image {
+                &__image-container {
                     width: 40vmin;
                     height: 56vmin;
-                    object-fit: cover;
-                    object-position: 100% center;
+                    overflow: hidden;
+                    position: relative;
+                    &__text {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        width: 40vmin;
+                        height: 56vmin;
+                        width: 100%;
+                        color: variables.$primary-color-100;
+                        font-size: 32px;
+                    }
+                    &__image {
+                        width: 40vmin;
+                        height: 56vmin;
+                        object-fit: cover;
+                        object-position: 100% center;
+                    }
                 }
             }
         }

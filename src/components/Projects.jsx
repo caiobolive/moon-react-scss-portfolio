@@ -47,7 +47,7 @@ const Projects = () => {
         }
       );
 
-      for(const image of trackElement.getElementsByClassName("projects__content__track__image")) {
+      for(const image of trackElement.getElementsByClassName("projects__content__track__image-container__image")) {
         image.animate({
           objectPosition: `${100 + nextPercentage}% center`
         }, { duration: 1200, fill: "forwards" });
@@ -86,11 +86,26 @@ const Projects = () => {
           onTouchStart={(event) => handleOnDown(event.touches[0])}
           onTouchEnd={(event) => handleOnUp(event.touches[0])}
           onTouchMove={(event) => handleProjectsScroll(event.touches[0])}>
-          <img className="projects__content__track__image" src={PhotoSlider1} draggable={false} />
-          <img className="projects__content__track__image" src={PhotoSlider2} draggable={false} />
-          <img className="projects__content__track__image" src={PhotoSlider3} draggable={false} />
-          <img className="projects__content__track__image" src={PhotoSlider4} draggable={false} />
-          <img className="projects__content__track__image" src={PhotoSlider5} draggable={false} />
+          <div className="projects__content__track__image-container">
+            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            <img className="projects__content__track__image-container__image" src={PhotoSlider1} draggable={false} />
+          </div>
+          <div className="projects__content__track__image-container">
+            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            <img className="projects__content__track__image-container__image" src={PhotoSlider2} draggable={false} />
+          </div>
+          <div className="projects__content__track__image-container">
+            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            <img className="projects__content__track__image-container__image" src={PhotoSlider3} draggable={false} />
+          </div>
+          <div className="projects__content__track__image-container">
+            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            <img className="projects__content__track__image-container__image" src={PhotoSlider4} draggable={false} />
+          </div>
+          <div className="projects__content__track__image-container">
+            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            <img className="projects__content__track__image-container__image" src={PhotoSlider5} draggable={false} />
+          </div>
         </div>
       </div>
     </section>
