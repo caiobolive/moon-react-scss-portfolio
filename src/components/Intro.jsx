@@ -1,6 +1,7 @@
 import "../styles/components/intro.scss";
 import MoonSpaceParallax from "./MoonSpaceParallax";
 import Loading from "./Loading";
+import LinkedinImg from "/img/socials/linkedin.svg";
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -35,6 +36,13 @@ const Intro = () => {
           <h6 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Portfolio</h6>
         </div>
         <div className="intro__content__see-more">
+          <a className="intro__content__see-more__socials" href="https://www.linkedin.com/in/caiobolive/" target="_blank">
+            <img 
+              id="linkedin" 
+              className="intro__content__see-more__socials__image" 
+              src={LinkedinImg}
+            />
+          </a>
           <Link to="/about" className="intro__content__see-more__link">
             <h6 className={animationIn ? "intro__content__see-more__link__text neon-flicker-in" : "intro__content__see-more__link__text"}>See More &gt; &gt;</h6>
           </Link>

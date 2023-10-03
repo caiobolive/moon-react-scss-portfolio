@@ -26,7 +26,8 @@
             &__see-more {
                 width: 100%;
                 display: flex;
-                justify-content: flex-end;
+                align-items: center;
+                justify-content: space-between;
                 &__link {
                     text-decoration: none;
                     padding: 16px;
@@ -37,6 +38,32 @@
                     border-radius: 8px;
                     &__text {
                         color: variables.$primary-color-100;
+                    }
+                }
+                &__socials {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    height: 50px;
+                    width: auto;
+                    overflow: hidden;
+                    position: relative;
+                    min-width: 70px;
+                    transition: all 0.6s ease-in-out;
+                    &__image {
+                        height: 200px;
+                        padding: 8px;
+                        width: auto;
+                        cursor: pointer;
+                        object-fit: cover;
+                        object-position: 100% center;
+                        transform: translate(0, -45%);
+                        position: absolute;
+                        top: 100%;
+                    }
+                    &:hover {
+                        min-width: 166px;
+                        filter: drop-shadow(0 0 5px variables.$primary-color-100);
                     }
                 }
             }

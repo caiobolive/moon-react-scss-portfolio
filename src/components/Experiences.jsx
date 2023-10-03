@@ -34,7 +34,7 @@ const Experiences = () => {
         </div>
         <div className="experiences__content__section">          
           <img 
-            id="puc-goias" 
+            id="web-dev-academind" 
             className="experiences__content__section__image" 
             src={WebDevImg}
           />
@@ -42,7 +42,7 @@ const Experiences = () => {
         </div>
         <div className="experiences__content__section">          
           <img 
-            id="puc-goias" 
+            id="cilia-tech" 
             className="experiences__content__section__image" 
             src={CiliaImg}
           />
@@ -50,7 +50,7 @@ const Experiences = () => {
         </div>
         <div className="experiences__content__section">          
           <img 
-            id="puc-goias" 
+            id="angular-academind" 
             className="experiences__content__section__image" 
             src={AngularImg}
           />
@@ -58,7 +58,7 @@ const Experiences = () => {
         </div>
         <div className="experiences__content__section">          
           <img 
-            id="puc-goias" 
+            id="react-academind" 
             className="experiences__content__section__image" 
             src={ReactImg}
           />
