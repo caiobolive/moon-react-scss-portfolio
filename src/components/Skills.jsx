@@ -67,9 +67,6 @@ const Skills = () => {
       </div>
       <MoonPhasesParallax/>
       <div className="skills__content">
-        <div className="skills__content__title">
-          <h2>Skills</h2>
-        </div>
         <div className="skills__content__list-container">
             {listOfLists.map((item, itemIndex) => (
               <div 

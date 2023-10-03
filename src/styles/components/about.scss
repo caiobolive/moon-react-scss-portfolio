@@ -7,8 +7,9 @@
     position: relative;
     .about {
         &__content {
-            margin-top: 100px;            
-            padding: 8px 16px;
+            margin-top: 8vh;            
+            padding: 16px;
+            height: 92vh;
             &__title {
                 color: variables.$primary-color-100;
                 font-size: 1rem;
@@ -18,6 +19,89 @@
         
                 &:after {
                     @include mixins.gradient-border;
+                }
+            }
+            &__section-wrapper {
+                height: 100%;
+                &__window-wrapper {
+                    height: 50%;
+                    display: flex;
+                    align-items: center;
+                    &__window-spacer {
+                        display: flex;
+                        height: 100%;
+                        width: 35vw;
+                    }
+                    &__window-text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 100%;
+                        width: 65vw;
+                        color: variables.$primary-color-100;
+                        font-size: 2rem;
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(10px);
+                        border-radius: 8px;
+                        padding: 16px;
+                        &__text-section {
+                            margin-bottom: 16px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                        h1 {
+                            letter-spacing: -0.15rem;
+                        }
+                        h4, h6 {
+                            letter-spacing: -0.1rem;
+                        }
+                    }
+                }
+                &__more-info-wrapper {
+                    height: 50%;
+                    color: variables.$primary-color-100;
+                    padding: 16px;
+                    font-size: 1.2rem;
+                    overflow-y: scroll;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(10px);
+                    &__text-section {
+                        &__subsection {
+                            margin-top: 8px;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        .about {
+            &__content {
+                &__section-wrapper {
+                    overflow-y: scroll;
+                    padding-top: 40vh;
+                    &__window-wrapper {
+                        flex-direction: column;
+                        height: fit-content;
+                        &__window-spacer {
+                            display: none;
+                        }
+                        &__window-text {
+                            width: 100%;
+                            justify-content: flex-start;
+                            font-size: 1.5rem;
+                            height: fit-content;
+                        }
+                    }
+                    &__more-info-wrapper {
+                        height: fit-content;
+                        font-size: 1rem;
+                        overflow-y: unset;
+                    }
                 }
             }
         }

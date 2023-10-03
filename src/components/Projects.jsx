@@ -73,9 +73,6 @@ const Projects = () => {
       </div>
       <MoonTransitionParallax/>
       <div className="projects__content">
-        <div className="projects__content__title">
-          <h2>Projects</h2>
-        </div>
         <div 
           className="projects__content__track lat-scroll" 
           id="projects-track"

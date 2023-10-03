@@ -19,9 +19,6 @@ const Experiences = () => {
       </div>
       <MoonZoomOutParallax/>
       <div className="experiences__content">
-        <div className="experiences__content__title">
-          <h2>Experiences</h2>
-        </div>
       </div>
     </section>
   );

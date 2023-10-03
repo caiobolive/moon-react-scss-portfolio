@@ -8,8 +8,9 @@
     overflow: hidden;
     .projects {
         &__content {
-            margin-top: 100px;            
-            padding: 8px 16px;
+            margin-top: 8vh;            
+            padding: 16px;
+            height: 92vh;
             &__title {
                 color: variables.$primary-color-100;
                 font-size: 1rem;
