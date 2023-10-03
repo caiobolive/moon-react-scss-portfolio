@@ -91,10 +91,12 @@ const Intro = () => {
               </ul>
             </div>
           </div>
-          <Link to="/about" className="intro__content__footer__see-more">
-            {lang === "en" && <h6 className={animationIn ? "intro__content__footer__see-more__text neon-flicker-in" : "intro__content__footer__see-more__text"}>See More &gt; &gt;</h6>}
-            {lang === "pt" && <h6 className={animationIn ? "intro__content__footer__see-more__text neon-flicker-in" : "intro__content__footer__see-more__text"}>Ver mais &gt; &gt;</h6>}
-          </Link>
+          {lang === "en" && <Link to="/en/about" className="intro__content__footer__see-more">
+            <h6 className={animationIn ? "intro__content__footer__see-more__text neon-flicker-in" : "intro__content__footer__see-more__text"}>See More &gt; &gt;</h6>
+          </Link>}
+          {lang === "pt" && <Link to="/pt/about" className="intro__content__footer__see-more">
+            <h6 className={animationIn ? "intro__content__footer__see-more__text neon-flicker-in" : "intro__content__footer__see-more__text"}>Ver Mais &gt; &gt;</h6>
+          </Link>}
         </div>
       </div>
     </section>
