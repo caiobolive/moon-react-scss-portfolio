@@ -197,7 +197,82 @@ span, p, b, h1, h2, h3, h4, h5, h6 {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-}  
+}
+
+.dropdown {
+   padding: 6px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: variables.$primary-color-100;
+   position: relative;
+   perspective: 1000px;
+   z-index: 100;
+   border-radius: 8px;
+   font-size: 1.5rem;
+   transition: all 0.3s ease;
+   .dropdown-title {
+    max-width: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+   &:hover {
+      cursor: pointer;
+      .dropdown-title {
+        max-width: 125px;
+      }
+   }  
+
+ .dropdown_menu {
+   position: absolute;
+   bottom: 100%;
+   left: 0;
+   width: 100%;
+   perspective: 1000px;
+   z-index: -1;
+   li, .neon-text {
+    display: none;
+    color: variables.$primary-color-100;
+    padding: 8px;
+    font-size: 1.5rem;
+    opacity: 0;
+    width: 90px;
+   }
+ }
+
+ .show-items {
+  li, .neon-text {
+    display: block;
+    opacity: 1;
+  }
+}
+}
+
+.dropdown_menu-animation {
+  @for $num from 1 through 5 {
+    .dropdown_item-#{$num} {
+      transform-origin: top center;
+      animation: rotateZ var(--transition-delay) ease-in-out forwards;
+    }
+  }
+}
+
+
+@keyframes rotateZ {
+  0% {
+    opacity: 0;
+    transform: translateZ(290px);
+  }
+  
+  80% {
+    transform: translateZ(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
 
 @media (min-aspect-ratio: 16/9) {
     #moon-window-background {

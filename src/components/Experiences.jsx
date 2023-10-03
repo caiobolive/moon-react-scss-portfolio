@@ -7,8 +7,11 @@ import CiliaImg from "/img/experiences/cilia_tech.jpg";
 import AngularImg from "/img/experiences/angular_academind.jpg";
 import ReactImg from "/img/experiences/react_academind.jpg";
 import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 
 const Experiences = () => {
+  const { lang } = useParams();
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -30,7 +33,8 @@ const Experiences = () => {
             className="experiences__content__section__image" 
             src={PucGoiasImg}
           />
-          <h4 className="experiences__content__section__text neon-text">Bachelor Degree at Computer Engineering 2017-2022</h4>
+          {lang === "en" && <h4 className="experiences__content__section__text neon-text">Bachelor Degree at Computer Engineering 2017-2022</h4>}
+          {lang === "pt" && <h4 className="experiences__content__section__text neon-text">Bacharelado em Engenharia de Computação 2017-2022</h4>}
         </div>
         <div className="experiences__content__section">          
           <img 
@@ -46,7 +50,8 @@ const Experiences = () => {
             className="experiences__content__section__image" 
             src={CiliaImg}
           />
-          <h4 className="experiences__content__section__text neon-text">2022-Current Working at Cilia Technology as a Front End Web Developer</h4>
+          {lang === "en" && <h4 className="experiences__content__section__text neon-text">2022-Current Working at Cilia Technology as a Front End Web Developer</h4>}
+          {lang === "pt" && <h4 className="experiences__content__section__text neon-text">2022-Atual trabalhando na Cilia Tecnologia como Desenvolvedor Front End</h4>}
         </div>
         <div className="experiences__content__section">          
           <img 

@@ -7,8 +7,11 @@ import PhotoSlider4 from "/img/project_slider_track/photo-slider-4-hd.png"
 import PhotoSlider5 from "/img/project_slider_track/photo-slider-5-hd.png"
 import Loading from "./Loading";
 import React, { useState, useEffect, useRef } from 'react';
+import { useParams } from "react-router-dom";
 
 const Projects = () => {
+  const { lang } = useParams();
+
   const [isLoading, setIsLoading] = useState(true);
   const [isMousePressed, setIsMousePressed] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -84,23 +87,28 @@ const Projects = () => {
           onTouchEnd={(event) => handleOnUp(event.touches[0])}
           onTouchMove={(event) => handleProjectsScroll(event.touches[0])}>
           <div className="projects__content__track__image-container">
-            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}
+            {lang === "pt" && <span className="projects__content__track__image-container__text neon-text">Em Breve</span>}
             <img className="projects__content__track__image-container__image" src={PhotoSlider1} draggable={false} />
           </div>
           <div className="projects__content__track__image-container">
-            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}
+            {lang === "pt" && <span className="projects__content__track__image-container__text neon-text">Em Breve</span>}
             <img className="projects__content__track__image-container__image" src={PhotoSlider2} draggable={false} />
           </div>
           <div className="projects__content__track__image-container">
-            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}
+            {lang === "pt" && <span className="projects__content__track__image-container__text neon-text">Em Breve</span>}
             <img className="projects__content__track__image-container__image" src={PhotoSlider3} draggable={false} />
           </div>
           <div className="projects__content__track__image-container">
-            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}
+            {lang === "pt" && <span className="projects__content__track__image-container__text neon-text">Em Breve</span>}
             <img className="projects__content__track__image-container__image" src={PhotoSlider4} draggable={false} />
           </div>
           <div className="projects__content__track__image-container">
-            <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>
+            {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}
+            {lang === "pt" && <span className="projects__content__track__image-container__text neon-text">Em Breve</span>}
             <img className="projects__content__track__image-container__image" src={PhotoSlider5} draggable={false} />
           </div>
         </div>
