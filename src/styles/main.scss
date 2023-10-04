@@ -191,14 +191,6 @@ span, p, b, h1, h2, h3, h4, h5, h6 {
     }
   }
 
-#moon-window-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-
 .dropdown {
    padding: 6px;
    display: flex;
@@ -274,16 +266,10 @@ span, p, b, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-aspect-ratio: 16/9) {
-    #moon-window-background {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    #moon-window-background {
-        width: auto;
-        height: 100%;
+@media (max-width: 768px) {
+    .dropdown {
+      .dropdown-title {
+        max-width: 0;
+      }
     }
 }

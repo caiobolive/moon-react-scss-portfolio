@@ -14,8 +14,9 @@ import CIcon from '/img/skill_icons/c.svg';
 import CppIcon from '/img/skill_icons/c++.svg';
 import GithubIcon from '/img/skill_icons/github.svg';
 import BitbucketIcon from '/img/skill_icons/bitbucket.svg';
-import VscodeIcon from '/img/skill_icons/visual-studio-code.svg';
 import JiraIcon from '/img/skill_icons/jira.svg';
+import AwsIcon from '/img/skill_icons/aws.svg';
+import VscodeIcon from '/img/skill_icons/visual-studio-code.svg';
 import FigmaIcon from '/img/skill_icons/figma.svg';
 
 const Skills = () => {
@@ -57,6 +58,7 @@ const repo = [
 ];
 
 const tools = [
+    { image: AwsIcon, enText: 'Using the S3, CloudFront and a Route 53 I am able to deploy and host Front-End websites such as this one', ptText: 'Usando o S3, CloudFront e a Route 53, consigo lançar e hostear os websites Front End como este próprio', class: 'skills__content__list-container__item__icon default-size-icon' },
     { image: VscodeIcon, enText: 'My preferred IDE for developing front-end with its extensions', ptText: 'Minha IDE preferida para desenvolvimento front-end com suas extensões', class: 'skills__content__list-container__item__icon default-size-icon' },
     { image: FigmaIcon, enText: 'I have made a few designs myself, also currently studying the tool and UI/UX', ptText: 'Fiz alguns designs por conta própria, também estou estudando a ferramenta e UI/UX atualmente', class: 'skills__content__list-container__item__icon default-size-icon' }
 ];

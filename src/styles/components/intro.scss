@@ -23,6 +23,30 @@
                     letter-spacing: -0.2rem;
                 }
             }
+            &__title {
+                &__text {
+                    &__icon {
+                        user-select: none;
+                        transition: all 0.3s ease;
+                        height: 24px;
+                        width: auto;
+                        margin-left: 8px;
+                        &:hover {
+                            filter: drop-shadow(0 0 5px variables.$primary-color-100); 
+                        }
+                    }
+                    .default-size-icon {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                span {
+                    margin-top: 8px;
+                    font-size: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                }
+            }
             &__footer {
                 width: 100%;
                 display: flex;
@@ -87,6 +111,13 @@
                     }
                     h6 {
                         letter-spacing: -0.05rem;
+                    }
+                }
+                &__footer {
+                    &__info {
+                        &__socials {
+                            min-width: 70px;
+                        }
                     }
                 }
             }

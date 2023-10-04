@@ -5,6 +5,7 @@ import LinkedinImg from "/img/socials/linkedin.svg";
 import React, { useState, useEffect } from 'react';
 import { Link, useParams  } from 'react-router-dom';
 import LanguageIcon from '@mui/icons-material/Language';
+import AwsIcon from '/img/skill_icons/aws.svg';
 
 const Intro = () => {
   const { lang } = useParams();
@@ -51,10 +52,18 @@ const Intro = () => {
           {lang === "en" && <h1 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Caio Oliveira's</h1>}
           {lang === "en" && <h4 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Front-End</h4>}
           {lang === "en" && <h6 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Portfolio</h6>}
+          {lang === "en" && <span className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>
+            Powered By 
+            <img src={AwsIcon} className={animationIn ? "intro__content__title__text__icon neon-flicker-in" : "intro__content__title__text__icon neon-text"} />
+          </span>}
           {lang === "pt" && <h6 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Bem vindo ao</h6>}
           {lang === "pt" && <h6 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Portfólio do</h6>}
           {lang === "pt" && <h1 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Caio Oliveira</h1>}
           {lang === "pt" && <h4 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Front-End</h4>}
+          {lang === "pt" && <span className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>
+            Proporcionado Por 
+            <img src={AwsIcon} className={animationIn ? "intro__content__title__text__icon neon-flicker-in" : "intro__content__title__text__icon neon-text"} />
+          </span>}
         </div>
         <div className="intro__content__footer">
           <div className="intro__content__footer__info">
