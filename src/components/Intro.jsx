@@ -48,7 +48,7 @@ const Intro = () => {
       <MoonSpaceParallax/>
       <div className="intro__content">
         <div className="intro__content__title">
-          {lang === "en" && <h6 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Welcome to</h6>}
+          {lang === "en" && <h6 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>lalalalal to</h6>}
           {lang === "en" && <h1 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Caio Oliveira's</h1>}
           {lang === "en" && <h4 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Front-End</h4>}
           {lang === "en" && <h6 className={animationIn ? "intro__content__title__text neon-flicker-in" : "intro__content__title__text neon-text"}>Portfolio</h6>}
