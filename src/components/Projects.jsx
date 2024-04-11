@@ -5,6 +5,8 @@ import PhotoSlider2 from "/img/project_slider_track/photo-slider-2-hd.png"
 import PhotoSlider3 from "/img/project_slider_track/photo-slider-3-hd.png"
 import PhotoSlider4 from "/img/project_slider_track/photo-slider-4-hd.png"
 import PhotoSlider5 from "/img/project_slider_track/photo-slider-5-hd.png"
+import bemGarden from "/video/bem-garden.mp4"
+import proManage from "/video/pro-manage.mp4"
 import Loading from "./Loading";
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from "react-router-dom";
@@ -87,14 +89,48 @@ const Projects = () => {
           onTouchEnd={(event) => handleOnUp(event.touches[0])}
           onTouchMove={(event) => handleProjectsScroll(event.touches[0])}>
           <div className="projects__content__track__image-container">
-            {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}
-            {lang === "pt" && <span className="projects__content__track__image-container__text neon-text">Em Breve</span>}
-            <img className="projects__content__track__image-container__image" src={PhotoSlider1} draggable={false} />
+            {lang === "en" && 
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://bem-garden-ecommerce.vercel.app" className="projects__content__track__image-container__text-container__text neon-text">Visit Websystem</a>
+              <a href="https://github.com/caiobolive/bem-garden-ecommerce" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
+            </div>
+            }
+            {lang === "pt" && 
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://bem-garden-ecommerce.vercel.app" className="projects__content__track__image-container__text-container__text neon-text">Visitar Websystem</a>
+              <a href="https://github.com/caiobolive/bem-garden-ecommerce" className="projects__content__track__image-container__text-container__text neon-text">Código fonte</a>
+            </div>
+            }
+            <video  
+              muted 
+              loop 
+              autoPlay={true} 
+              id="bem-garden-video-demo" 
+              className="projects__content__track__image-container__image" >
+              <source src={bemGarden} type="video/webm" />
+            </video>
           </div>
           <div className="projects__content__track__image-container">
-            {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}
-            {lang === "pt" && <span className="projects__content__track__image-container__text neon-text">Em Breve</span>}
-            <img className="projects__content__track__image-container__image" src={PhotoSlider2} draggable={false} />
+            {lang === "en" && 
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://bem-garden-ecommerce.vercel.app" className="projects__content__track__image-container__text-container__text neon-text">Visit Websystem</a>
+              <a href="https://github.com/caiobolive/bem-garden-ecommerce" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
+            </div>
+            }
+            {lang === "pt" && 
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://caiobolive.github.io/pro-manage/home" className="projects__content__track__image-container__text-container__text neon-text">Visitar Websystem</a>
+              <a href="https://github.com/caiobolive/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">Código fonte</a>
+            </div>
+            }
+            <video  
+              muted 
+              loop 
+              autoPlay={true} 
+              id="bem-garden-video-demo" 
+              className="projects__content__track__image-container__image" >
+              <source src={proManage} type="video/webm" />
+            </video>
           </div>
           <div className="projects__content__track__image-container">
             {lang === "en" && <span className="projects__content__track__image-container__text neon-text">Coming Soon</span>}

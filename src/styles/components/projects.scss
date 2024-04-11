@@ -36,6 +36,26 @@
                     height: 56vmin;
                     overflow: hidden;
                     position: relative;
+                    &__text-container {
+                        width: 40vmin;
+                        height: 56vmin;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        &__text {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            color: variables.$primary-color-600;
+                            font-size: 32px;
+                            margin: 16px 0;
+                            z-index: 1;
+                            cursor: pointer;
+                        } 
+                    }
                     &__text {
                         display: flex;
                         align-items: center;
@@ -52,6 +72,21 @@
                         height: 56vmin;
                         object-fit: cover;
                         object-position: 100% center;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 720px) {
+        .projects {
+            &__content {
+                &__track {
+                    &__image-container {
+                        &__text-container {
+                            &__text {
+                                font-size: 14px;
+                            }
+                        }
                     }
                 }
             }
