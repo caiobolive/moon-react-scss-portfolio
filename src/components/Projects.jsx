@@ -119,7 +119,7 @@ const Projects = () => {
             }
             {lang === "pt" && 
             <div className="projects__content__track__image-container__text-container">
-              <a href="https://caiobolive.github.io/pro-manage/home" className="projects__content__track__image-container__text-container__text neon-text">Visitar Websystem</a>
+              <a href="https://caiobolive.github.io/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">Visitar Websystem</a>
               <a href="https://github.com/caiobolive/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">Código fonte</a>
             </div>
             }
