@@ -113,8 +113,8 @@ const Projects = () => {
           <div className="projects__content__track__image-container">
             {lang === "en" && 
             <div className="projects__content__track__image-container__text-container">
-              <a href="https://bem-garden-ecommerce.vercel.app" className="projects__content__track__image-container__text-container__text neon-text">Visit Websystem</a>
-              <a href="https://github.com/caiobolive/bem-garden-ecommerce" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
+              <a href="https://caiobolive.github.io/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">Visit Websystem</a>
+              <a href="https://github.com/caiobolive/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
             </div>
             }
             {lang === "pt" && 
