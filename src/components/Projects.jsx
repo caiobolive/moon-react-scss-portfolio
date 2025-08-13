@@ -7,6 +7,8 @@ import PhotoSlider4 from "/img/project_slider_track/photo-slider-4-hd.png"
 import PhotoSlider5 from "/img/project_slider_track/photo-slider-5-hd.png"
 import bemGarden from "/video/bem-garden.mp4"
 import proManage from "/video/pro-manage.mp4"
+import fleetManager from "/video/fleet-manager.mp4"
+import bovControl from "/video/bov-control.mp4"
 import Loading from "./Loading";
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from "react-router-dom";
@@ -21,12 +23,12 @@ const Projects = () => {
   const [prevPercentage, setPrevPercentage] = useState(0);
   const [dataPercentage, setDataPercentage] = useState(0);
   const [trackTransformAnimate, setTrackTransformAnimate] = useState('translate(0, -50%)');
-  const trackRef = useRef(null);  
+  const trackRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 500); 
+    }, 500);
   }, []);
 
   const handleProjectsScroll = (e) => {
@@ -78,58 +80,100 @@ const Projects = () => {
       </div>
       <MoonTransitionParallax/>
       <div className="projects__content">
-        <div 
-          className="projects__content__track lat-scroll" 
+        <div
+          className="projects__content__track lat-scroll"
           id="projects-track"
           ref={trackRef}
-          onMouseDown={handleOnDown} 
-          onMouseUp={handleOnUp} 
+          onMouseDown={handleOnDown}
+          onMouseUp={handleOnUp}
           onMouseMove={handleProjectsScroll}
           onTouchStart={(event) => handleOnDown(event.touches[0])}
           onTouchEnd={(event) => handleOnUp(event.touches[0])}
           onTouchMove={(event) => handleProjectsScroll(event.touches[0])}>
           <div className="projects__content__track__image-container">
-            {lang === "en" && 
+            {lang === "en" &&
             <div className="projects__content__track__image-container__text-container">
               <a href="https://bem-garden-ecommerce.vercel.app" className="projects__content__track__image-container__text-container__text neon-text">Visit Websystem</a>
               <a href="https://github.com/caiobolive/bem-garden-ecommerce" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
             </div>
             }
-            {lang === "pt" && 
+            {lang === "pt" &&
             <div className="projects__content__track__image-container__text-container">
               <a href="https://bem-garden-ecommerce.vercel.app" className="projects__content__track__image-container__text-container__text neon-text">Visitar Websystem</a>
               <a href="https://github.com/caiobolive/bem-garden-ecommerce" className="projects__content__track__image-container__text-container__text neon-text">Código fonte</a>
             </div>
             }
-            <video  
-              muted 
-              loop 
-              autoPlay={true} 
-              id="bem-garden-video-demo" 
+            <video
+              muted
+              loop
+              autoPlay={true}
+              id="bem-garden-video-demo"
               className="projects__content__track__image-container__image" >
               <source src={bemGarden} type="video/webm" />
             </video>
           </div>
           <div className="projects__content__track__image-container">
-            {lang === "en" && 
+            {lang === "en" &&
             <div className="projects__content__track__image-container__text-container">
               <a href="https://caiobolive.github.io/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">Visit Websystem</a>
               <a href="https://github.com/caiobolive/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
             </div>
             }
-            {lang === "pt" && 
+            {lang === "pt" &&
             <div className="projects__content__track__image-container__text-container">
               <a href="https://caiobolive.github.io/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">Visitar Websystem</a>
               <a href="https://github.com/caiobolive/pro-manage" className="projects__content__track__image-container__text-container__text neon-text">Código fonte</a>
             </div>
             }
-            <video  
-              muted 
-              loop 
-              autoPlay={true} 
-              id="bem-garden-video-demo" 
+            <video
+              muted
+              loop
+              autoPlay={true}
+              id="bem-garden-video-demo"
               className="projects__content__track__image-container__image" >
               <source src={proManage} type="video/webm" />
+            </video>
+          </div>
+          <div className="projects__content__track__image-container">
+            {lang === "en" &&
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://caiobolive.github.io/react-auth-crud-app/auth" className="projects__content__track__image-container__text-container__text neon-text">Visit Websystem</a>
+              <a href="https://github.com/caiobolive/react-auth-crud-app" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
+            </div>
+            }
+            {lang === "pt" &&
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://caiobolive.github.io/react-auth-crud-app/auth" className="projects__content__track__image-container__text-container__text neon-text">Visitar Websystem</a>
+              <a href="https://github.com/caiobolive/react-auth-crud-app" className="projects__content__track__image-container__text-container__text neon-text">Código fonte</a>
+            </div>
+            }
+            <video
+              muted
+              loop
+              autoPlay={true}
+              id="fleet-manager-video-demo"
+              className="projects__content__track__image-container__image" >
+              <source src={fleetManager} type="video/webm" />
+            </video>
+          </div>
+          <div className="projects__content__track__image-container">
+            {lang === "en" &&
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://github.com/caiobolive/bov-control-challenge" className="projects__content__track__image-container__text-container__text neon-text">View Source</a>
+            </div>
+            }
+            {lang === "pt" &&
+            <div className="projects__content__track__image-container__text-container">
+              <a href="https://github.com/caiobolive/bov-control-challenge" className="projects__content__track__image-container__text-container__text neon-text">Código fonte</a>
+            </div>
+            }
+            <video
+              muted
+              loop
+              autoPlay={true}
+              id="bov-control-video-demo"
+              className="projects__content__track__image-container__image projects__content__track__image-container__image--mobile" >
+              <source src={bovControl} type="video/webm" />
             </video>
           </div>
           <div className="projects__content__track__image-container">
